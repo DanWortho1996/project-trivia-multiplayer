@@ -1,0 +1,1 @@
+const apiUrl = 'https://opentdb.com/api.php?amount=50&type=multiple'; // Fetch 50 random questions

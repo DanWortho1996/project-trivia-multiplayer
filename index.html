@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Quiz Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Trivia Quiz Game</h1>
+        <div id="roomControls">
+            <input type="text" id="roomId" placeholder="Enter Room ID" />
+            <button id="createRoom">Create Room</button>
+            <button id="joinRoom">Join Room</button>
+            <button id="startGame" style="display: none;">Start Game</button>
+        </div>
+        
+        <div id="instructions" style="display: none;">
+            <h3>How to Play:</h3>
+            <p>1. The host creates a room and shares the Room ID.</p>
+            <p>2. Players join using the Room ID.</p>
+            <p>3. The host starts the game when ready.</p>
+            <p>4. Answer the questions within 15 seconds to avoid elimination!</p>
+            <p>5. The last player standing wins!</p>
+            <button onclick="closeInstructions()">Close Instructions</button>
+        </div>
+
+        <div id="quiz" style="display: none;">
+            <p id="questionText"></p>
+            <div id="answers"></div>
+            <p id="timer">Time Left: 15s</p>
+            <button id="submitAnswer" disabled>Submit Answer</button>
+        </div>
+
+        <div id="result" style="display: none;"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-peer/9.11.1/simplepeer.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
